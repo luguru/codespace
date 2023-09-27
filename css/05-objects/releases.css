@@ -1,0 +1,136 @@
+.releases {
+    .main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-block-size: 585px;
+        background-image: url(../../assets/images/bg_samurai.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .image {
+        position: absolute;
+        inline-size: 100vw;
+        left: 0;
+        top: 0;
+        /* margin-inline: calc(-50vw + 50%); */
+        object-fit: cover;
+        object-position: top;
+        z-index: -1;
+        padding-block-start: 50px;
+        background-color: var(--color-white);
+    }
+    .data {
+        inline-size: 50%;
+        margin-inline-start: auto;
+    }
+    .title {
+        font-size: var(--font-size-13);
+        color: var(--color-grey-4);
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -34px;
+            display: block;
+            background-color: var(--color-secondary);
+            inline-size: 48px;
+            block-size: 1px;
+        }
+    }
+    .film-title {
+        font-size: var(--font-size-37);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+        margin-block: 34px 24px;
+    }
+    .film-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: var(--font-size-13);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+    }
+    .film-description {
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-15);
+        color: var(--color-grey-4);
+        margin-block: 30px 36px;
+    }
+    .film-actions {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+    .others {
+        display: flex;
+        overflow: hidden;
+        /* margin-inline: calc(-50vw + 50%); */
+    }
+    .item {
+        position: relative;
+        flex: 1;
+        object-fit: cover;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            display: block;
+            inline-size: 100%;
+            block-size: 100%;
+            background: linear-gradient(
+                0deg,
+                var(--color-primary) 0%,
+                transparent 70%
+            );
+            z-index: 0;
+        }
+        &:hover .film-data {
+            bottom: 85px;
+            .film-actions {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .film-data {
+        position: absolute;
+        inline-size: 100%;
+        bottom: 50px;
+        padding: 16px 38px 50px 38px;
+        z-index: 1;
+        transition: all 0.3s;
+        .film-title {
+            font-size: var(--font-size-27);
+            color: var(--color-white);
+            margin-block: 0 10px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -20px;
+                display: block;
+                background-color: var(--color-tertiary);
+                inline-size: 48px;
+                block-size: 1px;
+            }
+        }
+        .film-info {
+            font-size: var(--font-size-12);
+            color: var(--color-grey-2);
+            text-transform: capitalize;
+        }
+        .film-actions {
+            position: absolute;
+            inline-size: 100%;
+            bottom: -36px;
+            display: flex;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    }
+}

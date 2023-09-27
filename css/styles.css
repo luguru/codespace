@@ -1,0 +1,16 @@
+@import url(01-settings/variables.css);
+@import url(01-settings/icons.css);
+
+@import url(03-generic/reset.css);
+@import url(03-generic/layout.css);
+
+@import url(04-elements/button.css);
+
+@import url(05-objects/nav.css);
+@import url(05-objects/news.css);
+@import url(05-objects/tabs.css);
+@import url(05-objects/slider.css);
+@import url(05-objects/releases.css);
+@import url(05-objects/opinions.css);
+@import url(05-objects/blog.css);
+@import url(05-objects/footer.css);

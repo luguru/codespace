@@ -1,0 +1,45 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .input {
+        position: absolute;
+        opacity: 0;
+
+        &:checked {
+            & + label {
+                color: var(--color-white);
+                & + .panel {
+                    display: block;
+                }
+            }
+        }
+    }
+    .label {
+        color: var(--color-grey-3);
+        cursor: pointer;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-13);
+        top: -100px;
+        position: relative;
+        &:hover {
+            color: var(--color-white);
+        }
+        &:not(:last-of-type)::after {
+            content: "/";
+            display: inline-block;
+            color: var(--color-grey-2);
+            padding-inline: 15px;
+        }
+    }
+    .panel {
+        display: none;
+        inline-size: 100%;
+        order: 99;
+        top: -75px;
+        position: relative;
+    }
+}

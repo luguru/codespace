@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin-inline: auto;
+    background-color: var(--color-primary);
+    font-family: var(--font-family-primary);
+}
+main {
+    background-color: var(--color-grey-1);
+}
+.layout-box {
+    max-inline-size: 1280px;
+    margin-inline: auto;
+}
+.background-dark {
+    background-color: var(--color-primary);
+}

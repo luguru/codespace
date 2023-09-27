@@ -1,0 +1,36 @@
+.icon {
+    display: inline-block;
+}
+.icon svg {
+    fill: var(--color-white);
+    inline-size: var(--inline-size-icon);
+    block-size: var(--block-size-icon);
+}
+.outlined svg {
+    --inline-size-icon: 18px;
+    --block-size-icon: 18px;
+}
+.brand svg {
+    --inline-size-icon: 36px;
+    --block-size-icon: 36px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.twitter svg {
+    background-color: #1da1f3;
+}
+.facebook svg {
+    background-color: #3a559f;
+}
+.instagram svg {
+    background-color: #ce2e92;
+}
+.youtube svg {
+    background-color: #e0011a;
+}
+.arrow {
+    --icon: url('data:image/svg+xml,<%3Fxml version="1.0" %3F><svg fill="%23e0011a" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 2" id="Layer_2"><path d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z"/></g></svg>');
+}
+.play {
+    --icon: url('data:image/svg+xml,<%3Fxml version="1.0" %3F><svg fill="black" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M20 33l12-9-12-9v18zm4-29C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>');
+}

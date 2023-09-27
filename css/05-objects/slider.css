@@ -1,0 +1,127 @@
+.slider {
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    max-inline-size: 1280px;
+}
+.slider__item {
+    position: relative;
+    scroll-snap-align: start;
+    user-select: none;
+    border: 2px solid transparent;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        background: linear-gradient(
+            0deg,
+            var(--color-primary) 0%,
+            transparent 70%
+        );
+        z-index: 0;
+    }
+    & img {
+        inline-size: 230px;
+        object-fit: cover;
+        block-size: 100%;
+    }
+}
+.slider__item-data {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: var(--color-white);
+    z-index: 1;
+}
+.slider__item-title {
+    font-size: var(--font-size-17);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    margin-block-end: 5px;
+}
+.slider__category {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-12);
+    color: var(--color-grey-3);
+}
+.slider__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 50px;
+    user-select: none;
+}
+.slider__navlink {
+    display: inline-block;
+    block-size: 8px;
+    inline-size: 8px;
+    border-radius: 50%;
+    background-color: var(--color-grey-2);
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+.slider__item:target {
+    border: 2px solid var(--color-secondary);
+}
+.slider:has(#slides__1:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__1"],
+.slider:has(#slides__2:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__2"],
+.slider:has(#slides__3:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__3"],
+.slider:has(#slides__4:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__4"],
+.slider:has(#slides__5:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__5"],
+.slider:has(#slides__6:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__6"],
+.slider:has(#slides__7:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__7"],
+.slider:has(#slides__8:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__8"],
+.slider:has(#slides__9:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__9"],
+.slider:has(#slides__10:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__10"],
+.slider:has(#slides__11:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__11"],
+.slider:has(#slides__12:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__12"],
+.slider:has(#slides__13:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__13"],
+.slider:has(#slides__14:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__14"],
+.slider:has(#slides__15:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__15"],
+.slider:has(#slides__16:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__16"],
+.slider:has(#slides__17:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__17"],
+.slider:has(#slides__18:target)
+    + .slider__nav
+    .slider__navlink[href="#slides__18"] {
+    background-color: var(--color-secondary);
+}

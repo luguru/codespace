@@ -1,0 +1,30 @@
+.button__outlined {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-13);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    color: var(--color-button);
+    gap: 10px;
+}
+.button__outlined--dark {
+    --color-button: var(--color-primary);
+}
+.button__outlined--light {
+    --color-button: var(--color-white);
+}
+.button__outlined--secondary {
+    --color-button: var(--color-secondary);
+}
+.button__outlined--icon::after {
+    content: "";
+    display: inline-block;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-size: contain;
+    block-size: 15px;
+    inline-size: 20px;
+}
+.button__outlined--icon-left {
+    flex-direction: row-reverse;
+}
