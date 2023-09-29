@@ -3,16 +3,11 @@
 }
 .icon svg {
     fill: var(--color-white);
-    inline-size: var(--inline-size-icon);
-    block-size: var(--block-size-icon);
-}
-.outlined svg {
-    --inline-size-icon: 18px;
-    --block-size-icon: 18px;
+    inline-size: 18px;
+    block-size: 18px;
 }
 .brand svg {
-    --inline-size-icon: 36px;
-    --block-size-icon: 36px;
+    box-sizing: content-box;
     border-radius: 50%;
     padding: 10px;
 }
