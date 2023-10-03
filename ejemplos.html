@@ -4,145 +4,114 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <style>
-            /* body {
-                display: grid;
-                place-items: center;
-                height: 100vh;
-            }
-            div {
-                width: 500px;
-                height: 200px;
-                padding: 20px;
-                border: 20px solid rgb(0 0 0 / 0.5);
-                background-image: url(assets/images/post-3-copyright-1170x658.jpg);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-clip: border-box;
-                background-origin: border-box;
-                overflow: auto;
-            } */
-            /* div,
-            p {
-                margin: 5px;
-                border: 3px solid;
-            }
-            p ~ div {
-                border: 3px solid red;
-            } */
-        </style>
     </head>
     <body>
-        <div class="flex">
-            <div class="item item-1">1</div>
-            <div class="item item-2">2</div>
-            <div class="item item-3">3</div>
-            <div class="item item-4">4</div>
-            <div class="item item-5">5</div>
-            <div class="item item-6">6</div>
+        <!-- <div class="container">
+            <div class="item item-1">Item 1</div>
+            <div class="item item-2">Item 2</div>
+            <div class="item item-3">Item 3</div>
+            <div class="item item-4">Item 4</div>
+            <div class="item item-5">Item 5</div>
+            <div class="item item-6">Item 6</div>
         </div>
 
         <style>
-            .flex {
-                display: flex;
-                height: 500px;
-                border: 3px solid;
-                /* width: 500px; */
-                /* flex-wrap: wrap; */
-                column-gap: 5px;
-                /* align-items: end; */
-                /* align-content: end; */
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 250px);
+                grid-template-rows: repeat(3, 150px);
+                gap: 10px;
+                background: grey;
+                height: 90vh;
+
+                /* justify-items: center;
+                align-items: center;
+                justify-content: center;
+                align-content: center; */
+                place-items: end;
+                place-content: center;
             }
 
             .item {
-                box-sizing: border-box;
-                flex-basis: 500px;
-                background: deeppink;
+                padding: 10px;
+                background-color: black;
                 color: white;
-                font-size: 100px;
-                padding: 5px;
-                text-align: center;
+                /* place-self: end; */
             }
-            .item-3 {
-                /* font-size: 200px; */
-                /* align-self: start; */
-                flex-shrink: 3;
-            }
-            .item-6 {
-                /* font-size: 200px; */
-                /* align-self: start; */
-                flex-shrink: 2;
-            }
-        </style>
-        <!-- <div>Elemento 1</div>
-        <div>Elemento 2</div>
-
-        <style>
-            div {
-                width: 100px;
-                height: 100px;
-                border: 3px solid #1a1a1a;
-                display: inline;
-                width: 250px;
-                background: steelblue;
-                color: white;
+            .item-5 {
+                /* align-self: end; */
+                order: -1;
             }
         </style> -->
-        <!-- <section>
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis doloremque amet perferendis delectus porro repellendus
-                    et, expedita nulla mollitia id nihil neque inventore quaerat
-                    nam voluptatem accusamus temporibus ipsa labore!
-                </p>
-            </div>
-        </section> -->
-        <!-- <section id="page">
-            <div>
-                div1
-                <p>parrafo1</p>
-                <div>
-                    div2
-                    <div>div3</div>
-                    <p>parrafo2</p>
-                    <div>div4</div>
-                    <div>div5</div>
-                    <p>parrafo3</p>
-                </div>
-            </div>
-        </section> -->
+        <!-- <div class="container">
+            <div class="item item-1">Header</div>
+            <div class="item item-2">Aside</div>
+            <div class="item item-3">Main</div>
+            <div class="item item-4">Footer</div>
+        </div>
+
+        <style>
+            .container {
+                /* height: 100vh; */
+                display: grid;
+                /* grid-template-columns: 250px 1fr;
+                grid-template-rows: 90px 1fr 150px; */
+                grid-template-areas:
+                    "head head"
+                    "menu main"
+                    "foot foot";
+            }
+
+            .item-1 {
+                grid-area: head;
+                background: blue;
+                color: white;
+                font-size: 50px;
+            }
+            .item-2 {
+                grid-area: menu;
+                background: red;
+                color: white;
+                font-size: 50px;
+            }
+            .item-3 {
+                grid-area: main;
+                background: green;
+                color: white;
+                font-size: 50px;
+            }
+            .item-4 {
+                grid-area: foot;
+                background: orange;
+                color: white;
+                font-size: 50px;
+            }
+        </style> -->
+        <div class="container">
+            <div class="item item-1">Item 1</div>
+            <div class="item item-2">Item 2</div>
+            <div class="item item-3">Item 3</div>
+            <div class="item item-4">Item 4</div>
+        </div>
+
+        <style>
+            .container {
+                display: inline-grid;
+                border: 5px solid darkred;
+            }
+
+            .item {
+                background: grey;
+                color: white;
+                padding: 1em;
+                border: 5px solid black;
+                min-width: 200px;
+            }
+            .item-1 {
+                background: red;
+                grid-column-start: -1;
+                grid-column-end: span 3;
+            }
+        </style>
     </body>
 </html>
