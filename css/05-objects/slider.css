@@ -1,10 +1,12 @@
 .slider {
     display: flex;
     gap: 25px;
-    overflow: hidden;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    max-inline-size: 1280px;
+    max-inline-size: 1160px;
+    &::-webkit-scrollbar {
+        width: 1em;
+    }
 }
 .slider__item {
     position: relative;
@@ -27,7 +29,7 @@
         z-index: 0;
     }
     & img {
-        inline-size: 230px;
+        inline-size: 210px;
         object-fit: cover;
         block-size: 100%;
     }

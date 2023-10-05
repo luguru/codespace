@@ -6,16 +6,21 @@
     .slider {
         display: flex;
         max-inline-size: 1280px;
-        overflow: hidden;
+        overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         gap: 25px;
+        &::-webkit-scrollbar {
+            width: 1em;
+        }
         .opinion {
             width: 100%;
             min-width: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            scroll-snap-align: start;
+            user-select: none;
             .image {
                 overflow: hidden;
                 border-radius: 50%;
