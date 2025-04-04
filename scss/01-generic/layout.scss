@@ -1,0 +1,25 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $font-text;
+    background-color: #F9F9F7;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+    font-weight: 400;
+}
+h1 {
+    font-style: italic;
+}
+.bg-white {
+    background-color: $color-white;
+}
+@mixin container {
+    max-width: 81rem;
+    padding-inline: 1rem;
+    margin: 0 auto;
+}
+@mixin padding-block {
+    padding-block: 120px;
+}

@@ -1,0 +1,94 @@
+.delivery {
+    display: flex;
+    align-items: center;
+    gap: 5.625rem;
+    padding-block: 7.5rem;
+}
+.delivery-imgs {
+    display: grid;
+    grid-template-columns: 26.875rem 18.125rem;
+    grid-template-rows: 1.875rem 20.8125rem 15rem 1.875rem;
+    gap: 1.5rem;
+}
+.delivery-img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 0.75rem;
+}
+.delivery-img:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+.delivery-img:nth-child(2) {
+    grid-row: 2 / 3;
+}
+.delivery-img:nth-child(3) {
+    grid-row: 3 / 5;
+}
+.delivery-title {
+    color: var(--color-font, #182226);
+    font-family: var(--font-title, "Playfair Display");
+    font-size: clamp(3rem, 2.5598rem + 1.0836vw, 3.4375rem);
+    font-weight: 500;
+    line-height: 110%;
+    margin-block-end: 1.875rem;
+}
+.delivery-desc {
+    line-height: 150%;
+    margin-block-end: 3.125rem;
+}
+.delivery-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.delivery-points-item {
+    color: var(--color-font, #182226);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 130%;
+    position: relative;
+    padding-inline-start: 50px;
+}
+.delivery-points-item::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    left: 0;
+    z-index: 5;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+.delivery-points-item:nth-child(1)::before {
+    content: url(../../images/clock.svg);
+}
+.delivery-points-item:nth-child(2)::before {
+    content: url(../../images/receipt-tax.svg);
+}
+.delivery-points-item:nth-child(3)::before {
+    content: url(../../images/shopping-cart.svg);
+}
+
+
+@media (width <= 80rem) {
+    .delivery-imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (width <= 64rem) {
+    .delivery {
+        gap: 3.5rem;
+    }
+}
+@media (width <= 48rem) {
+    .delivery {
+        flex-direction: column;
+        padding-block: 3.5rem;
+    }
+    .delivery-info {
+        order: -1;
+    }
+}

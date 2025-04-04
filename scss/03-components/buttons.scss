@@ -1,0 +1,31 @@
+.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 7rem;
+    border: 1.5px solid var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-secondary);
+    transition: all .2s cubic-bezier(.82,.04,.2,.85);
+    cursor: pointer;
+    font-weight: 700;
+    &:hover {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+.button-xl {
+    padding: 1.25rem 2rem;
+}
+.button-red {
+    border: 1.5px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+    &:hover {
+        border-color: var(--color-secondary);
+        background-color: transparent;
+        color: var(--color-secondary);
+    }
+}

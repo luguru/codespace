@@ -1,0 +1,78 @@
+.footer {
+    background-color: var(--color-dark-grey);
+    color: var(--color-tertiary);
+    padding-block: 5.5rem;
+}
+.footer h3 {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    margin-block-end: 2.5rem;
+}
+.footer-info {
+    display: flex;
+    gap: 8.4375rem;
+    margin-block-end: 6.25rem;
+}
+.footer-info > div {
+    width: 33%;
+}
+.footer-info-company {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+.footer-info-company-desc {
+    color: #ADB29E;
+}
+.footer-info-menus {
+    display: flex;
+    gap: 7.5rem;
+}
+.footer-info-pages-menu-item,
+.footer-info-utility-menu-item {
+    color: #DBDFD0;
+}
+.footer-info-pages-menu-item:not(:last-child),
+.footer-info-utility-menu-item:not(:last-child) {
+    margin-block-end: 1.25rem;
+}
+.footer-info-instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9375rem;
+}
+.footer-info-instagram-img {
+    border-radius: 0.75rem;
+}
+.footer-copyright {
+    padding-block-start: 1.875rem;
+    border-top: 1px solid #414536;
+    color: #ADB29E;
+    text-align: center;
+}
+svg circle {
+    fill: var(--color-primary);
+    fill-opacity: 1;
+}
+@media (width <= 80rem) {
+    .footer-info {
+        gap: 7.1875rem;
+    }
+    .footer-info-menus {
+        gap: 5.5rem;
+    }
+}
+@media (width <= 62rem) {
+    .footer-info {
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        margin-block-end: 2.5rem;
+    }
+    .footer-info > div {
+        width: fit-content;
+    }
+    div.footer-info-menus {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
