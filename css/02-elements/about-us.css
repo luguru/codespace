@@ -1,6 +1,8 @@
 .about-us {
-    @include container;
-    @include padding-block;
+    max-width: 81rem;
+    padding-inline: 1rem;
+    margin: 0 auto;
+    padding-block: 120px;
     
     display: flex;
     align-items: center;
@@ -12,7 +14,7 @@
         position: relative;
     }
     &-info-box {
-        @extend .about-us-info;
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 25px;

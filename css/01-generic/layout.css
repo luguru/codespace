@@ -2,24 +2,24 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: $font-text;
+    font-family: var(--font-text);
     background-color: #F9F9F7;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-title;
+    font-family: var(--font-title);
     font-weight: 400;
 }
 h1 {
     font-style: italic;
 }
 .bg-white {
-    background-color: $color-white;
+    background-color: var(--color-white);
 }
-@mixin container {
+.container {
     max-width: 81rem;
     padding-inline: 1rem;
     margin: 0 auto;
 }
-@mixin padding-block {
+.padding-block {
     padding-block: 120px;
 }
